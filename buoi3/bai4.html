@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 4</title>
+</head>
+<style>
+   
+    .menu{
+        text-align: center;
+    }
+    .menu li{
+    	font-weight: bold;
+        background-color: pink;
+        border: 2px solid blue;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        display: inline-block;
+        margin-left: -6px;
+        margin-top: -2px;
+        line-height: 40px;
+        position: relative;
+    }
+
+    .menu li:hover{
+        background-color: white;
+    }
+
+    .nam{
+        display: none;
+        position: absolute;
+    }
+
+    .nam li{
+        margin-left: -42px;
+        top: 12px;
+    }
+
+    .menu li:hover .nam{
+        display: block;
+    }
+
+    .dongho{
+        display: none;
+        position: absolute;
+    }
+
+    .dongho li{
+        margin-left: -1px;
+        top: 0px;
+    }
+
+    .nam li:hover .dongho{
+        display: inline-block;
+    }
+
+</style>
+<body>
+ <div class="menu">
+    <ul>
+        <li>Trang Chủ</li>
+        <li>Quần Áo Nam
+            <ul class="nam">
+                <li>Áo Cộc Tay</li>
+                <li>Quần Jean</li>
+                <li>Đồng Hồ Đeo Tay
+                   	<ul class="dongho">
+                            <li>Đồng Hồ Casio</li>
+                            <li>Đồng Hồ Rolex</li>
+                            <li>Đồng Hồ Hàng Mã</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+            <li>Quần Áo Nữ</li>
+            <li>Quần Áo Trẻ Em</li>
+    </ul>
+    </div>
+</body>
+</html>

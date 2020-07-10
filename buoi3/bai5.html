@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 5</title>
+</head>
+<style>
+   
+    
+     .menu ul{
+        list-style-type: none;
+    }
+    .menu li{
+    	font-weight: bold;
+        background-color: pink;
+        border: 2px solid red;
+        width: 200px;
+        height: 50px;
+        line-height: 40px;
+        position: relative;
+        padding-left: 10px;
+        margin-top: -2px;
+        left: 500px;
+    }
+
+    .menu li:hover{
+        background-color: white;
+    }
+
+    .nam{
+        display: none;
+        position: absolute;
+    }
+
+    .nam li{
+        margin-left: -340px;
+        top: -40px;
+    }
+
+    .menu li:hover .nam{
+        display: block;
+    }
+
+    .jean{
+        display: none;
+        position: absolute;
+    }
+
+    .jean li{
+        margin-left: -412px;
+        top: 0px;
+    }
+
+    .nam li:hover .jean{
+        display: inline-block;
+    }
+
+</style>
+<body>
+ <div class="menu">
+    <ul>
+        <li>Trang Chủ</li>
+        <li>Quần Áo Nam
+            <ul class="nam">
+                <li>Áo Cộc Tay</li>
+                <li>Quần Jean
+                    <ul class="jean">
+                            <li>Quần Nâu</li>
+                            <li>Quần Vàng</li>
+                            <li>Quần Xanh</li>
+                    </ul>
+                </li>
+                <li>Đồng Hồ Đeo Tay</li>
+            </ul>
+        </li>
+        <li>Quần Áo Nữ</li>
+        <li>Quần Áo Trẻ Em</li>
+    </ul>
+    </div>
+</body>
+</html>
