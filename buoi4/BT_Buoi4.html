@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Buổi 4</title>
+</head>
+<style>
+	.container{
+		width: 100%;
+		height: auto;
+		font-family: Time New Roman;
+		font-size: 14px;
+	}
+	.header{
+		margin: 10px;
+		margin-left: 100px;
+	}
+	.img1{
+		width: 200px;
+		height: 100px;
+		margin-left: 1px;
+
+	}
+	.img2{
+		width: 850px;
+		height: 100px;
+		margin-left: 80px;
+	}
+	.menu{
+		width: 100%;
+		height: 50px;
+		background-color: blue;
+		color: white;
+	}
+	.menu ul{
+		margin: 10px;
+		padding: 0px;
+		margin-left: 100px;
+	}
+	.menu ul li{
+		font-weight: bold;
+		list-style: none;
+		display: inline-block;
+		line-height: 50px;
+		background-color: blue;
+		position: relative;
+		margin-left: -4px;
+		width: auto;
+	}
+	.menu ul li:hover{
+		cursor: pointer;
+		background-color: red;
+	}
+	.menu ul .js .jquery{
+		display: none;
+		position: absolute;
+		width: 150px;
+	}
+	.menu ul .js .jquery li{
+		margin-left: -100px;
+		top:-10px;
+		width: 200px;
+		background-color: grey;
+		padding-left: 30px;
+	}
+	.menu ul .js .jquery li:hover{
+		background-color: red;
+		cursor: pointer;
+	}
+	.menu li:hover .jquery{
+		display: block;
+	}
+	.menu ul li a{
+		color: white;
+		text-decoration: none;
+		padding: 0px 20px 0px 10px;
+		display: block;
+	}
+	.menu ul li:hover{
+		cursor: pointer;
+		background-color: red; 
+	}
+	.menu ul li a.active{
+		background: red;
+	}
+	.img3{
+		width: 1333px;
+		height: 500px;
+	}
+	.main .time{
+		color: grey;
+	}
+	
+	.main .left{
+		width: 60%;
+		float: left;
+		min-height: 3000px;
+		padding-left: 70px;
+	}
+	.main .left .left1 {
+		width: 100%;
+		height: auto;
+		font-weight: bold;
+	}
+	.main .left .left1 img{
+		width: 780px;
+		height: 450px;
+	}
+	.main .left .left1 a{
+		color: blue;
+		text-decoration: none;
+	}
+	.main .left .left1 a:hover{
+		color: orange;
+	}
+
+	.main .left .left1 .desc1{
+		width: 780px;
+		font-weight: normal;
+	}
+	
+	.main .left .left2{
+		width: 100%;
+		display: inline-block;
+	}
+	.main .left .left2 a{
+		text-decoration: none;
+		color: blue;
+		display: block;
+	}
+	.main .left .left2 a:hover{
+		color: orange;
+	}
+	.main .left .left2 p{
+		color: grey;
+	}
+	.main .left .left2 img{
+		width: 250px;
+		height: 200px;
+	}
+	.main .left .left2 .left2-1{
+		width: 265px;
+		float: left;
+	}
+	.main .left .left2 .left2-2{
+		width: 265px;
+		float: left;
+	}
+	.main .left .left2 .left2-3{
+		width: 265px;
+		float: left;
+	}
+	.main .left .left3{
+		width: 100%;
+		height: auto;
+	}
+	.main .left .left3 ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	.main .left .left3 ul li{
+		list-style: none;
+		height: auto;
+		clear: both;
+		border-bottom: solid 1px grey;
+		float: left;
+		margin-bottom: 20px;
+	}
+	.main .left .left3 img{
+		width: 250px;
+		height: 150px;
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 20px;
+	}
+	.main .left .left3 a{
+		text-decoration: none;
+		color: blue;
+	}
+	.main .left .left3 a:hover{
+		color: orange;
+	}
+	.main .left .left4{
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 40px;
+	}
+	.main .left .left4 a{
+		text-decoration: none;
+		padding-left: 15px;
+		color: blue;
+	}
+	.main .left .left4 a:hover{
+		color: orange;
+	}
+	.main .right{
+		width: 27%;
+		float: left;
+		min-height: 3000px;
+		margin-left: 30px;
+	}
+	.main .right .danhmuc{
+		border: 1px solid grey;
+		margin-top: 20px;
+	}
+	.main .right .danhmuc ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	.main .right .danhmuc ul li{
+		margin-top: -10px;
+		margin-left: 30px;
+	}
+	.main .right .danhmuc ul li a{
+		display: block;
+		text-decoration: none;
+		line-height: 32px;
+		padding-left: 0px;
+		margin-top: 20px;
+		color: black;
+	}
+	.main .right .danhmuc ul li a:hover{
+		color: orange;
+	}
+	.main .right .danhmuc h3{
+		background: blue;
+		height: 40px;
+		list-style: 40px;
+		color: white;
+		padding-left: 10px;
+		margin-top: 0px;
+		line-height: 40px;
+	}
+
+	.main .right .news ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	.main .right .news ul li{
+		list-style: none;
+		border-bottom: solid 1px grey;
+		float: left;
+		margin-bottom: 10px;
+	}
+	.main .right .news ul li a{
+		text-decoration: none;
+		color: black;
+		margin-top: 0px;
+	}
+	.main .right .news ul li a:hover{
+		color: orange;
+	}
+	.main .right .news h3{
+		background: blue;
+		height: 40px;
+		list-style: 40px;
+		color: white;
+		margin-top: 30px;
+		padding-left: 10px;
+		line-height: 40px;
+	}
+	.main .right .news img{
+		width: 100px;
+		height: 90px;
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	.main .right .news-more{
+		margin-top: 30px;
+	}
+	.main .right .news-more h3{
+		background: blue;
+		height: 40px;
+		list-style: 40px;
+		color: white;
+		margin-top: 30px;
+		padding-left: 10px;
+		line-height: 40px;
+		clear: both;
+	}
+	.main .right .news-more ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	.main .right .news-more ul li{
+		list-style: none;
+		border-bottom: solid 1px grey;
+		float: left;
+		margin-bottom: 30px;
+	}
+	.main .right .news-more ul li a{
+		text-decoration: none;
+		color: black;
+		margin-top: 0px;
+	}
+	.main .right .news-more ul li a:hover{
+		color: orange;
+	}
+	.main .right .news-more p{
+		background: blue;
+		height: 30px;
+		width: 20px;
+		line-height: 30px;
+		padding-left: 10px;
+		color: white;
+		float: left;
+		margin-right: 10px;
+		margin-top: 0px;
+	}
+	.main .right .qc h3{
+		background: blue;
+		height: 40px;
+		color: white;
+		line-height: 40px;
+		padding-left: 10px;
+		clear: both;
+	}
+	.main .right .qc img{
+		height: 600px;
+		width: 360px;
+		margin-top: -16px;
+	}
+	.main .right .friend h3{
+		background: blue;
+		height: 40px;
+		color: white;
+		line-height: 40px;
+		padding-left: 10px;
+		clear: both;
+		margin-top: 0px;
+	}
+	.main .right .friend ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	.main .right .friend ul li{
+		margin-top: -10px;
+		margin-left: 30px;
+	}
+	.main .right .friend ul li a{
+		display: block;
+		text-decoration: none;
+		line-height: 32px;
+		padding-left: 0px;
+		margin-top: 20px;
+		color: black;
+	}
+	.main .right .friend ul li a:hover{
+		color: orange;
+	}
+	.main .right .friend{
+		border: 1px solid grey;
+		margin-top: 30px;
+	}
+	.main .right .fb{
+		margin-top: 30px;
+	}
+	.main .right .fb h3{
+		background: blue;
+		height: 40px;
+		color: white;
+		line-height: 40px;
+		padding-left: 10px;
+		clear: both;
+		margin-top: 0px;
+	}
+	.main .right .fb img{
+		height: 475px;
+		width: 360px;
+		margin-top: -17px;
+	}
+	.footer1{
+		background: blue;
+		width: 100%;
+		height: 300px;
+		clear: both;
+		color: white;
+	}
+	.footer1 .info{
+		width: 300px;
+		clear: both;
+		padding-left: 130px;
+		padding-top: 20px;
+		padding-right: 80px;
+		float: left;
+	}
+	.footer1 .info h3{
+		border-bottom: 1px solid white;
+		padding-bottom: 20px;
+	}
+	.footer1 .info a{
+		text-decoration: none;
+		color: white;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	.footer1 .info a:hover{
+		color: orange;
+	}
+	.footer1 .info a p{
+		border: solid 1px white;
+		width: 70px;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 5px;
+		margin-top: 30px;
+	}
+	.footer1 .chuyenmuc{
+		padding-top: 20px;
+		width: 300px;
+		float: left;
+		padding-right: 80px;
+	}
+	.footer1 .chuyenmuc h3{
+		border-bottom: 1px solid white;
+		padding-bottom: 20px;
+	}
+	.footer1 .chuyenmuc ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	.footer1 .chuyenmuc ul li{
+		margin-left: 15px;
+		padding-bottom: 10px;
+	}
+	.footer1 .chuyenmuc ul li a{
+		text-decoration: none;
+		color: white;
+	}
+	.footer1 .chuyenmuc ul li a:hover{
+		color: orange;
+	}
+	.footer1 .lienhe{
+		width: 300px;
+		padding-top: 20px;
+		float: left;
+	}
+	.footer1 .lienhe h3{
+		border-bottom: 1px solid white;
+		padding-bottom: 20px;
+	}
+	.footer1 .lienhe ul{
+		padding: 0px;
+		margin: 0px;
+	}
+	.footer1 .lienhe ul li{
+		margin-left: 0px;
+		padding-bottom: 10px;
+		list-style: none;
+	}
+	.footer2{
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		background-color: grey;
+		line-height: 50px;
+		margin-top: -15px;
+		font-weight: bold;
+		color: red;
+	}
+
+</style>
+<body>
+<div class="container">
+	<div class="header">
+		<img class="img1" src="http://html.thietkeweb43.com/mywebsite/images/logo.png" alt="">
+		<a href=""><img class="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSklihMvcdA244VW_Ghtzegdi7LsHqGBwl9g&usqp=CAU" alt=""></a>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a href="#" class="active">TRANG CHỦ</a></li>
+			<li><a href="">GIỚI THIỆU</a></li>
+			<li><a href="">HỌC HTML</a></li>
+			<li><a href="">HỌC CSS</a></li>
+			<li class="js"><a href="">HỌC JQUERY</a>
+				<ul class="jquery">
+					<li>HỌC VUEJS</li>
+					<li>ANGULARJS</li>
+					<li>HỌC REACTJS</li>
+				</ul>
+			</li>
+			<li><a href="">HỌC WORDPRESS</a></li>
+			<li><a href="">HỌC REACTJS</a></li>
+			<li><a href="">LIÊN HỆ</a></li>
+		</ul>
+	</div>
+	<div class="slide">
+		<img class="img3" src="https://nld.mediacdn.vn/2018/photo-1-1514859634861.jpg" alt="">
+	</div>
+	<div class="main">
+		<div class="left">
+			<div class="left1"><h2>BÀI VIẾT NỔI BẬT</h2>
+				<a href=""><img src="https://aphoto.vn/wp-content/uploads/2018/02/anh-chup-dien-thoai-dep-1.jpg" alt=""></a>
+				<a href=""><h2>Hướng dẫn chuyển html sang wordpress khởi tạo dự án</h2></a>	
+				<div class="desc1">	
+					<p class="time">Ngày đăng: 18-07-2020, Lượt xem: 1999 views</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum libero unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum libero unde laudantium sapiente atque odio at facere nemo aperiam.</p>
+				</div>
+			</div>
+
+			<div class="left2">
+				<div class="left2-1">
+					<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+					<a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+					<p>Ngày đăng: 18-07-2020</p>
+				</div>
+				<div class="left2-2">
+					<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+					<a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+					<p>Ngày đăng: 18-07-2020</p>
+				</div>
+				<div class="left2-3">
+					<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+					<a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+					<p>Ngày đăng: 18-07-2020</p>
+				</div>
+			</div>
+
+			<div class="left3">
+				<h2>BÀI VIẾT MỚI NHẤT</h2>
+				<ul>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>
+					<li>
+						<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhpewNv22n-xirXFFAaMEENzMHD8Qzoeg6aA&usqp=CAU" alt=""></a>
+						<a href=""><h2>Bài viết mới nhất của chủ đề hướng dẫn wordpress</h2></a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, sapiente mollitia, dolore minus et eligendi quod perspiciatis placeat iure deleniti obcaecati blanditiis eius sit! Consectetur ullam praesentium deserunt ratione hic.</p>
+					</li>					
+				</ul>			
+			</div>
+			<div class="left4">
+				<span>1</span>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">...</a>
+				<a href="">4</a>
+				<a href="">5</a>
+				<a href="">6</a>
+				<a href="">Tiếp theo</a>
+			</div>
+		</div>	
+		<div class="right">
+			<div class="danhmuc">
+				<h3>CHUYÊN MỤC</h3>
+				<ul>
+					<li><a href="">Học wordpress (152)</a></li>
+					<li><a href="">Học HTML (52)</a></li>
+					<li><a href="">Học CSS (15)</a></li>
+					<li><a href="">Học Jquery (7)</a></li>
+					<li><a href="">Học React Native (8)</a></li>
+					<li><a href="">Chủ đề khác (10)</a></li>
+				</ul>
+			</div>
+			<div class="news">
+				<h3>BÀI VIẾT MỚI</h3>
+				<ul>
+					<li>
+						<a href=""><img src="https://i.ytimg.com/vi/1mfDPpunnM0/hqdefault.jpg" alt=""></a>
+						<a href="">7 kênh youtube học lập trình web tốt nhất thế giới giúp bạn nâng cao kỹ năng</a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+					</li>
+					<li>
+						<a href=""><img src="https://i.ytimg.com/vi/1mfDPpunnM0/hqdefault.jpg" alt=""></a>
+						<a href="">Học HTML & CSS, học front end thông qua dự án thực tế</a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+					</li>
+					<li>
+						<a href=""><img src="https://i.ytimg.com/vi/1mfDPpunnM0/hqdefault.jpg" alt=""></a>
+						<a href="">5 frameworks frontend miễn phí tốt nhất cho dự án web của bạn</a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+					</li>
+					<li>
+						<a href=""><img src="https://i.ytimg.com/vi/1mfDPpunnM0/hqdefault.jpg" alt=""></a>
+						<a href="">Những đoạn code hay dùng trong lập trình theme woocommecre wordpressg</a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+					</li>
+					<li>
+						<a href=""><img src="https://i.ytimg.com/vi/1mfDPpunnM0/hqdefault.jpg" alt=""></a>
+						<a href="">Share plugin get bài viết từ 10 trang báo nổi tiếng của Việt Nam</a>
+						<p class="time">Ngày đăng: 18-07-2020</p>
+					</li>
+				</ul>
+			</div>
+			<div class="news-more">
+				<h3>BÀI VIẾT XEM NHIỀU</h3>
+				<ul>
+					<li>
+						<p>1</p>
+						<a href="">Download file psd background chương trình, hội nghị</a>
+					</li>
+					<li>
+						<p>2</p>
+						<a href="">Download miễn phí phần mềm Adobe indesign CS4 & CS5</a>
+					</li>
+					<li>
+						<p>3</p>
+						<a href="">Du hí Quảng Nam – Làng bích họa – Tượng đài Mẹ Thứ</a>
+					</li>
+					<li>
+						<p>4</p>
+						<a href="">Du hí Quảng Nam – Thánh địa Mỹ Sơn</a>
+					</li>
+					<li>
+						<p>5</p>
+						<a href="">Share full code website tin tức sử dụng wordpress</a>
+					</li>
+					<li>
+						<p>6</p>
+						<a href="">Share full code web shop, web bán hàng sử dụng wordpress</a>
+					</li>
+					<li>
+						<p>7</p>
+						<a href="">Những câu hỏi thường gặp khi đi phỏng vấn lập trình php</a>
+					</li>
+					<li>
+						<p>8</p>
+						<a href="">10 đoạn code đếm ngược sử dụng script cực đẹp, miễn phí</a>
+					</li>
+				</ul>
+			</div>
+			<div class="qc">
+				<h3>QUẢNG CÁO</h3>
+				<a href=""><img src="https://cdn3.ivivu.com/2019/02/suong-giang-tren-ho-tuyen-lam-vao-top-anh-dep-tren-bao-my-ivivu-1.jpg" alt=""></a>
+			</div>
+			<div class="friend">
+				<h3>BẠN BÈ</h3>
+				<ul>
+					<li><a href="">Huy Kira</a></li>
+					<li><a href="">Blog Huy Kira</a></li>
+					<li><a href="">Huy Kira Vlog</a></li>
+					<li><a href="">Huy Kira Ins</a></li>
+					<li><a href="">Blog Huy Ytb</a></li>
+
+				</ul>
+			</div>
+			<div class="fb">
+				<h3>FACEBOOK</h3>
+				<a href=""><img src="https://kenh14cdn.com/thumb_w/660/2019/10/22/tyxsomewhere696207385343698073143614793606844560133466n-15717552959871450959225.jpg" alt=""></a>
+			</div>
+		</div>			
+	</div>
+		
+		<div class="footer1">
+			<div class="info">
+					<h3>VỀ TÔI</h3>
+					<p>Tốt nghiệp ĐH Sư Phạm nhưng tôi lại thích lập trình và thiết kê web, vì vậy tôi tạo ra trang web này để trao đổi kiến thức về lập trình và thiết kế web</p>
+					<a href=""><p>Xem thêm</p></a>
+			</div>
+			<div class="chuyenmuc">
+				<h3>CHUYÊN MỤC</h3>
+				<ul>
+					<li><a href="">Lập trình</a></li>
+					<li><a href="">Thiết kế Web</a></li>
+					<li><a href="">Học Wordpress</a></li>
+					<li><a href="">Học HTML & CSS</a></li>
+					<li><a href="">Video hướng dẫn</a></li>
+					<li><a href="">Kiến thức khác</a></li>
+				</ul>
+			</div>
+			<div class="lienhe">
+				<h3>LIÊN HỆ</h3>
+				<ul>
+					<li>Địa chỉ: Lương Phong - Hiệp Hòa - Bắc Giang</li>
+					<li>Điện thoại: 0353830798</li>
+					<li>Email: hoadx.utt@gmail.com</li>
+					<li>Facebook: Đỗ Xuân Hòa</li>
+				</ul>
+			</div>
+		</div>
+	<div class="footer2">
+			<p>Bản quyền thuộc về Hòa ĐX</p>
+	</div>
+</div>
+</body>
+</html>
