@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 2</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var ktra = +(window.prompt("Nhập điểm KT: "));
+	var gk = +(window.prompt("Nhập điểm GK: "));
+	var thi = +(window.prompt("Nhập điểm thi: "));
+	var dtb = (+(ktra) + +(gk) + +(thi))/3;
+
+	if (ktra < 0 || ktra > 10 || gk < 0 || gk > 10 || thi < 0 || thi > 10) {
+		document.write("Dữ liệu nhập vào không phù hợp!");
+	}
+
+	else {
+			var dtb = ((ktra+gk+thi)/3).toFixed(2);
+	if(dtb >=9) {
+		document.write("Điểm trung bình: " +dtb+ "</br>" + " Hạng A");
+	}
+	else if (dtb >=7 && dtb <9) {
+		document.write("Điểm trung bình: " +dtb+ "</br>" + " :Hạng B");
+	}
+	else if (dtb >=5 && dtb <7) {
+		document.write("Điểm trung bình: " +dtb+ "</br>" + " :Hạng C");
+	}
+	else if (dtb <5) {
+		document.write("Điểm trung bình: " +dtb+ "</br>" + " :Hạng F");
+	}
+	else{
+	document.write("Dữ liệu không phù hợp!");
+	}
+}
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 3</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var time = +(window.prompt("Nhập số phút gọi: "));
+
+	if (time > 0 && time < 50) {
+		document.write("Phí thuê bao là: " + (1000+time*600) + " VND");
+	}
+	else if (time >=50 && time <= 200) {
+		document.write("Phí thuê bao là: " + (1000+50*600+(time-50)*400) + " VND");
+	}
+	else if (time > 200) {
+		document.write("Phí thuê bao là: " + (1000+50*600+150*400+(time-200)*200) + " VND");
+	}
+	else{
+		document.write("Nhập số liệu không hợp lệ!");
+	}
+	
+</script>
+</html>
