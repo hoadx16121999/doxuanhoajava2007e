@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+    
+    var soNguyenDuong = [];
+    soNguyenDuong[0] = [35, 78, 33, 1];
+    soNguyenDuong[1] = [9, 104, 22, 74];
+    soNguyenDuong[2] = [155, 75, 23, 44];
+    soNguyenDuong[3] = [42, 44, 8, 100];
+
+    var soLonNhat = soNguyenDuong[0][0];
+    var soNhoNhat = soNguyenDuong[0][0];
+
+    soNguyenDuong[0].forEach(function(item, index, arr) {
+        if (+item > soLonNhat) {
+            soLonNhat = +item;
+        }
+
+        if (+item < soNhoNhat) {
+            soNhoNhat = +item;
+        }
+    });
+    soNguyenDuong[1].forEach(function(item, index, arr) {
+        if (+item > soLonNhat) {
+            soLonNhat = +item;
+        }
+
+        if (+item < soNhoNhat) {
+            soNhoNhat = +item;
+        }
+    });
+    soNguyenDuong[2].forEach(function(item, index, arr) {
+        if (+item > soLonNhat) {
+            soLonNhat = +item;
+        }
+
+        if (+item < soNhoNhat) {
+            soNhoNhat = +item;
+        }
+    });
+    soNguyenDuong[3].forEach(function(item, index, arr) {
+        if (+item > soLonNhat) {
+            soLonNhat = +item;
+        }
+
+        if (+item < soNhoNhat) {
+            soNhoNhat = +item;
+        }
+    });
+
+    document.write("So lớn nhat: " + soLonNhat + "</br>");
+    document.write("So nhỏ nhat: " + soNhoNhat);
+</script>
+</body>
+</html>
