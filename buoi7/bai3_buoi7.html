@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+    var chuoi = window.prompt("Nhập chuỗi: ");
+    var newContent = chuoi.trim(); //xóa khoảng trống ở đầu và cuối
+    var array = newContent.split(" "); //tách chuỗi
+    var result = "";
+    var newArray =[];
+
+    for(var i=0; i<array.length; i++){
+        newArray[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+        //viết hoa chữ đầu
+    }
+
+    result += newArray[i];
+    var resultArray = newArray.join("-");
+    //cách nhau dấu -
+
+    document.write(resultArray);
+</script>
+</html>
