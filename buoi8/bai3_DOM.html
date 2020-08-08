@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<center>
+	<script>
+		var myVar = setInterval(myTimer, 1000); 
+		function myTimer() {
+		var d = new Date(); 
+		var t = d.toLocaleTimeString(); 
+		document.getElementById("h").innerHTML = t;
+		}
+	</script>
+	<span id="h"></span>
+</center>
+<style>
+#h {
+	color: blue;
+	font-weight:400;
+    display: block;
+    font-size: 30px;
+    margin: 0 0 5px;
+    letter-spacing: 5px;
+}
+</style>
+</html>

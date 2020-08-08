@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+	<form>
+ <table border="1" align="center">
+  <tr>
+    <td colspan ="2" align="center" style="color: red; background: pink"><h2>Đăng nhập</h2></td>
+  </tr>
+
+  <tr style="color: red">
+    <td><b> Username:</b></td>
+	<td><input type="text" id="username" placeholder="Nhập tên đăng nhập..." /></td>
+  </tr>
+
+  <tr style="color: red">
+    <td><b> Password:</b></td>
+	<td><input type="password" id="password" placeholder="Nhập mật khẩu..." /></td>
+  </tr>
+
+  <tr>
+    <td colspan="2" align="center"> 
+       <input type="submit" id="login" value="LOGIN" style="cursor: pointer; background: green; color: white" onclick="validate()"/>
+    </td>
+  </tr>
+ </table>
+ </form>
+</body>
+<script>
+	function validate(){
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		if ( username == "admin" && password == "123456"){
+			document.write("Xin chào bạn: " + username);
+     	}
+     	else{
+       		alert("Nhập sai mật khẩu hoặc tên đăng nhập");
+       	}
+     	return false;
+    }
+</script>
+</html>
